@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: hsl(0, 0%, 100%);
+    font-family: "Messina Sans", sans-serif;
+  }
+  
+  /* Header Styles */
+  .discovery-head {
+    padding: 60px 200px 10px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: -70px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .discovery-head.scrolled {
+    padding: 20px 200px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    height: 80px;
+    z-index: 1000;
+  }
+  
+  .discovery-head-logo img {
+    width: 151px;
+    position: relative;
+    bottom: 34px;
+    right: 144px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .discovery-head.scrolled .discovery-head-logo img {
+    filter: invert(1);
+  }
+  
+  /* Navbar links */
+  .discovery-head-nav ul {
+    position: relative;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    top: 31px;
+    left: 94px;
+  }
+  
+  .discovery-head-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .discovery-head.scrolled .discovery-head-nav ul li a {
+    color: black;
+  }
+  
+  .discovery-head.hide {
+    top: -100px;
+    opacity: 0;
+  }
+  
+  .discovery-head.hide .discovery-head-nav ul li a {
+    color: white;
+  }
+  
+  /* Main Gallery Styles */
+  .gallery-main {
+    background-color: #111;
+  }
+  
+  .gallery-main-article-div {
+    padding: 15rem 1rem 6rem;
+  }
+  
+  .galleries-items-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Updated gallery items with responsive design */
+  .galleries-items {
+    width: 32%; /* Approximately 3 items per row */
+    padding-bottom: 50px;
+  }
+  
+  .galleries-items a {
+    text-decoration: none;
+  }
+  
+  .galleries-items-figure img {
+    width: 100%;
+  }
+  
+  .galleries-items-tile {
+    color: #fff;
+    font-size: 0.85rem;
+    line-height: 1.1;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .galleries-items-para {
+    color: #777;
+    line-height: 1.3;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Footer Styles */
+  .discovery-footer {
+    background-color: #161f1e;
+    position: relative;
+    padding: 0 166.50px 0 166.500px;
+  }
+  
+  .discovery-footer-div {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90rem;
+  }
+  
+  .discovery-footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  
+  .discovery-footer-content a {
+    display: block;
+    height: auto;
+  }
+  
+  .discovery-footer-content img {
+    width: 50px;
+  }
+  
+  .discovery-nav-content {
+    display: flex;
+    gap: 120px;
+  }
+  
+  .discovery-nav-menu h4 {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: messina-sans;
+    font-size: .7rem;
+    letter-spacing: -.01em;
+    margin-bottom: .75rem;
+    text-transform: uppercase;
+  }
+  
+  .discovery-first-list {
+    list-style: none;
+  }
+  
+  .discovery-first-list li {
+    font-size: .9rem;
+    line-height: 2;
+  }
+  
+  .discovery-first-list li a {
+    color: #fff;
+  }
+  
+  .discovery-second-list a {
+    color: #fff;
+  }
+  
+  .discovery-about {
+    display: flex;
+  }
+  
+  .discovery-about-main {
+    list-style: none;
+  }
+  
+  .discovery-about-main li a {
+    color: #fff;
+  }
+  
+  .about-main-list {
+    font-size: .9rem;
+    line-height: 2;
+    margin-bottom: .25rem;
+  }
+  
+  .discovery-about-sub {
+    list-style: none;
+    margin-left: 84px;
+    margin-right: 11px;
+  }
+  
+  .discovery-about-sub li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 65px;
+  }
+  
+  .footer-bottom-copyright {
+    font-size: .75rem;
+    color: hsla(0, 0%, 100%, 0.75);
+  }
+  
+  .site-by-outpost a {
+    text-decoration: none;
+    color: #fff;
+    font-size: .75rem;
+  }
+  
+  /* Media query for tablet screens */
+  @media screen and (max-width: 1024px) and (min-width: 769px) {
+    .galleries-items {
+      width: 32%; /* Keeps 3 items per row on tablet */
+    }
+  
+    .gallery-main-article-div {
+      padding: 12rem 1rem 5rem; /* Slightly reduced padding for tablets */
+    }
+  }
+  
+  /* Media query for phone screens */
+  @media screen and (max-width: 768px) {
+    .galleries-items {
+      width: 100%; /* Full width for single column on phones */
+      margin-bottom: 30px; /* Add some space between items */
+    }
+  
+    .gallery-main-article-div {
+      padding: 10rem 1rem 4rem; /* Reduced padding for mobile */
+    }
+  
+    .galleries-items-div {
+      justify-content: center; /* Center items on mobile */
+    }
+  
+    .discovery-head {
+      padding: 20px;
+    }
+  
+    .discovery-head-logo img {
+      width: 100px;
+      bottom: 0;
+      right: 0;
+    }
+  
+    .discovery-head-nav ul {
+      top: 0;
+      left: 0;
+      gap: 20px;
+    }
+  
+    .discovery-footer {
+      padding: 0 20px;
+    }
+  
+    .discovery-nav-content {
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  
+    .discovery-footer-content img {
+      width: 35px;
+    }
+  
+    .discovery-footer-content {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  
+    .discovery-about {
+      flex-direction: column;
+    }
+  
+    .discovery-about-sub {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-bottom-copyright {
+      margin-bottom: 10px;
+    }
+  }
+  
+  
